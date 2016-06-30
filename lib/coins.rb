@@ -1,10 +1,10 @@
-class Fixnum
+class String
   define_method(:coins) do |quarters, dimes, nickels|
     quarter_counter = 0
-    cents_input = self
-    quarter_amount = quarters
-    dime_amount = dimes
-    nickel_amount = nickels
+    cents_input = self.to_i
+    quarter_amount = quarters.to_i
+    dime_amount = dimes.to_i
+    nickel_amount = nickels.to_i
     quarter_var = ''
     dime_var = ''
     nickel_var = ''
