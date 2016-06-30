@@ -1,17 +1,15 @@
 require('sinatra')
 require('sinatra/reloader')
-require('./lib/coins')
+require('./lib/anagram')
 also_reload('lib/**/*.rb')
 
 get('/') do
   erb(:index)
 end
 
-get('/coins_output') do
-  @amount = params.fetch('amount')
-  @quarters = params.fetch('quarters')
-  @dimes = params.fetch('dimes')
-  @nickels = params.fetch('nickels')
-  @coins = @amount.coins(@quarters, @dimes, @nickels)
-  erb(:coins_output)
+get('/anagram_output') do
+  @string = params.fetch('string')
+  @first_str = params.fetch('first_str')
+  @anagram = @first_str.anagram?(@string)
+  erb(:anagram_output)
 end

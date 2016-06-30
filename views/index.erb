@@ -1,14 +1,10 @@
 <h1>Welcome to our Coin Converter</h1>
-<form action="/coins_output">
+<form action="/anagram_output">
   <div class="form-group">
-     <label for="amount">What would you like to have converted to coins?</label>
-     <input id="amount" name="amount" class="form-control" type="number">
-     <label for="quarters">Maximum number of quarters?</label>
-     <input id="quarters" name="quarters" class="form-control" type="number" required='true'>
-     <label for="dimes">Maximum number of dimes?</label>
-     <input id="dimes" name="dimes" class="form-control" type="number" required='true'>
-     <label for="nickels">Maximum number of nickels?</label>
-     <input id="nickels" name="nickels" class="form-control" type="number" required='true'>
+     <label for="first_str">What would you like to have compared?</label>
+     <input id="first_str" name="first_str" class="form-control" type="text">
+     <label for="string">Comparison string?</label>
+     <input id="string" name="string" class="form-control" type="text" required='true'>
   </div>
   <button type="submit" class="btn-success">Send</button>
 </form>
